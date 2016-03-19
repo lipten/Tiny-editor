@@ -1,15 +1,8 @@
 
-var htmlCode = '&lt;h1&gt;Hello~&lt;/h1&gt;'
-var cssCode = 'h1{color:red}'
-var jsCode = 'document.getElementsByTagName("h1")[0].innerHTML="Hello World!"'
-
-
 function TinyEditor(el,opt){
 	var DefaultOpt = {
-		tabs : 'html | css | js',
 		index : '1'
 	}
-	/*document.getElementById(el).innerHTML=container*/
 	ace.require("ace/ext/language_tools");
 	opt = utils.mixin(DefaultOpt,opt,true)
 	this.init(el,opt)
