@@ -1,0 +1,71 @@
+<html>
+<head>
+    <meta charset="utf-8">
+	<title></title>
+    <!-- load ace -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <link rel="stylesheet" href="Tiny-editor.css"/>
+
+</head>
+<body>
+<h1>Tiny Editor</h1>
+
+
+
+<div id="tabPlugin" class="tabPlugin">
+    <ul id="tabControls">
+        <li onclick="Tiny.tab(1)">HTML</li>
+        <li onclick="Tiny.tab(2)">CSS</li>
+        <li onclick="Tiny.tab(3)">JavaScript</li>
+        <li onclick="Tiny.tab(4);Tiny.run()" id="resultTab">Result</li>
+    </ul>
+    <a class="run button" onclick="Tiny.run()">Run</a>
+    <a class="save button" onclick="Tiny.save()">Save</a>
+    <a class="full button" onclick="Tiny.fullScreen()">Full-Screen</a>
+    <a class="dock button" onclick="Tiny.dockMode()" id="dockButton">Dock-Mode</a>
+    <a class="live button hide" onclick="Tiny.liveMode()" id="liveButton">live-Mode</a>
+    <select name="" id="theme"></select>
+    <div class="tabContainer">
+       <pre id='html' style="font-size: 16px;">
+&lt;h1&gt;
+    Hello~
+&lt;/h1&gt;
+        </pre>
+    </div>
+
+    <div class="tabContainer">
+        <pre id= 'css' style="font-size: 16px;">
+h1{
+    color:red;
+}
+        </pre>
+    </div>
+
+
+    <div class="tabContainer">
+        <pre id='js' style="font-size: 16px;">
+
+document.getElementsByTagName('h1')[0].innerHTML='Hello World!'
+
+        </pre>
+
+    </div>
+    <div class="tabContainer" id="dockIframe">
+        <div class="split-line" id="splitLine"></div>
+        <iframe class="iframe" id="iframe" sandbox="allow-forms allow-popups allow-scripts allow-same-origin allow-modals" name="iframe" frameborder="0">
+        </iframe>
+    </div>
+</div>
+
+
+
+
+<script src="http://cdn.bootcss.com/ace/1.2.3/ace.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="Tiny-editor.js"></script>
+<script>
+    var Tiny = new TinyEditor('Tiny-container',{
+        index : 2
+    })
+</script>
+</body>
+</html>

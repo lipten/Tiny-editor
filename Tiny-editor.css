@@ -1,0 +1,173 @@
+body,html{
+    margin:0;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    height:100%;
+    width:100%;
+}
+ul{
+    list-style: none;
+
+}
+
+.hide{
+    display: none;
+}
+
+.tabPlugin{
+    width:100%;
+    height:460px;
+    position: relative;
+    padding-top: 40px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.tabPlugin.full{
+    height:100%;
+    position: fixed;
+    z-index:10;
+    top:0;
+    left:0;
+    width: 100%;
+}
+
+.tabPlugin ul{
+    padding: 0;
+    margin: 0;
+    width:100%;
+    background: #ccc;
+    height: 40px;
+    margin-top:-40px;
+}
+.tabPlugin li{
+    width:100px;
+    height:40px;
+    text-align: center;
+    background: #ccc;
+    float: left;
+    line-height: 40px;
+    cursor: pointer;
+}
+.tabPlugin li.active{
+    background: #272822;
+    color: #fff;
+}
+
+
+.tabPlugin .tabContainer{
+    position: absolute;
+    top: 40px;
+    left: 0 ;
+    z-index: 0;
+    width:100%;
+    height:100%;
+    -webkit-transition: opacity .3s;
+       -moz-transition: opacity .3s;
+        -ms-transition: opacity .3s;
+         -o-transition: opacity .3s;
+            transition: opacity .3s;
+    opacity: 0;
+}
+
+.tabPlugin .tabContainer.dockMode{
+    opacity: 1;
+    z-index: 1;
+    right: 0;
+    left: auto;
+    width: 300px;
+}
+
+.tabPlugin .tabContainer.current{
+    z-index:1;
+    opacity:1;
+}
+
+.tabPlugin .tabContainer.dockMode .split-line{
+    position: absolute;
+    width:20px;
+    height:100%;
+    left: -10px;
+    text-align: center;
+}
+
+.tabPlugin .tabContainer.dockMode .split-line:after{
+    content:"";
+    width:2px;
+    height:100%;
+    background: #fff;
+    display: inline-block;
+}
+
+.tabPlugin .tabContainer.dockMode .split-line:hover{
+    cursor: e-resize;
+}
+
+.tabContainer pre{
+    width:100%;
+    height:100%;
+    margin:0;
+}
+
+.button{
+    position: absolute;
+    right: 10px ;
+    display: inline-block;
+    padding:0px 15px;
+    height:30px;
+    line-height: 30px;
+    text-align: center;
+    top:5px;
+    background: #272822;
+    color:#fff;
+    z-index:1;
+    cursor: pointer;
+}
+.button:hover{
+    background: #44463d;
+}
+
+.button.active{
+    background: #717368;
+}
+
+.save{
+    right:80px;
+}
+.full{
+    right:160px;
+}
+.dock{
+    right:295px;
+}
+
+.live{
+    right:396px;
+    height:25px;
+    line-height: 25px;
+    top: 8px;
+}
+.live.hide{
+    display: none;
+}
+
+.iframe.fullScreen{
+    position: fixed;
+    width:100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.iframe{
+    width:100%;height: 100%;background: #272822;
+}
+
+
+select{
+    position: absolute;
+    top: -37px;
+    right: 0;
+}
