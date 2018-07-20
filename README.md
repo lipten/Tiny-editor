@@ -7,7 +7,7 @@ Demo:http://lipten.link/demo/editor
 -----
 ### Usage
 
-#### 1、下载slidePage
+#### 1、下载Tiny-editor
 ```
 git clone https://github.com/lipten/Tiny-editor.git
 ```
