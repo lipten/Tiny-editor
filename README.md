@@ -1,8 +1,5 @@
-# Tiny-editor
-Demo:http://lipten.link/demo/editor
-
-线上案例：
-http://www.codeasily.net/editor
+demo案例：
+http://codeasily.net/editor
 
 ### -update v0.1-
 1.测试版，目前有个别功能不稳定。
